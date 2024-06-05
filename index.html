@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Valor do Item</title>
+
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            padding: 50px;
+        }
+
+        #resultado {
+            font-weight: 600;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Insira um Item</h1>
+    <form>
+        <label for="itemInput">Item:</label>
+        <input type="text" id="itemInput" name="itemInput">
+        <button type="button" onclick="exibirValor()">Exibir Valor</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function exibirValor() {
+            const item = document.getElementById('itemInput').value;
+            document.getElementById('resultado').textContent = "O valor inserido é: " + item;
+        }
+    </script>
+</body>
+</html>
